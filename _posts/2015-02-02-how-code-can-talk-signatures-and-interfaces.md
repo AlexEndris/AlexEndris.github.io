@@ -20,13 +20,13 @@ tags:
 I’ll start off with a small code sample. What could be read out of the signature of this method alone:
 
 ```csharp
-void DoSomething(IList&lt;MyClass> list)
+void DoSomething(IList<MyClass> list)
 ```
 
 I intentionally chose a non-talking method name, because I want to elaborate on the parameters here, especially. So, “DoSomething” expects a parameter that implements the IList<T> interface. Which enables the writer of this method to change the content of the list. Add, remove, insert, clear items. Let’s reveal what this method actually does:
 
 ```csharp
-void DoSomething(IList&lt;MyClass> list)
+void DoSomething(IList<MyClass> list)
 {
     foreach (MyClass item in list)
         Console.WriteLine(item.Name);
@@ -44,9 +44,9 @@ Of course it is the same with custom interfaces. Let’s say we have a class cal
 Don’t do this at home: 
 
 ```csharp
-void DoSomething(IEnumerable&lt;MyClass> list)
+void DoSomething(IEnumerable<MyClass> list)
 {
-    IList&lt;MyClass> realList = (IList&lt;MyClass>)list;
+    IList<MyClass> realList = (IList<MyClass>)list;
 
     realList.Add(new MyClass());
 }

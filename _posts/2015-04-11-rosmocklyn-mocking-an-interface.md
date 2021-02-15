@@ -54,7 +54,7 @@ The latest mocking framework which – I’m also currently using at work – is
 Since I don’t want to go into specifics about the decisions I made and subsequently used in my own framework, this is more of a conclusion of the above. Essentially, I like APIs that are very declarative and tell me in one read what this is all about. Let’s see the assertion of NSubstitute as an example:
 
 ```csharp
-IInterface myMock = Substitute.For&lt;IInterface>();
+IInterface myMock = Substitute.For<IInterface>();
 
 // do something in your test
 
