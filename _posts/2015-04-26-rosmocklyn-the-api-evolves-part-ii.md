@@ -29,7 +29,7 @@ tags:
   - RhinoMocks
   - Setup
 ---
-Last time I wrote about the creation of mocks and how I solved setting up method calls. Let’s delve into assertions.
+Last time I wrote about the creation of mocks and how I solved setting up method calls. Let's delve into assertions.
 
 ### Assertions
 
@@ -45,11 +45,10 @@ myMock.AssertWasCalled(x => x.SomeMethod());
 // Moq 
 myMock.Verify(x => x.SomeMethod());
 // NSubstitute 
-myMock.Received().SomeMethod();```
+myMock.Received().SomeMethod();
+```
 
-&nbsp;
-
-Of course there is not much those differ in, except maybe the first shown here from RhinoMocks. Same as with setting up methods I wanted to do the same as NSubstitute does here but ran into the same problems as before. I’ve actually never checked if NSubstitute has similar issues that I discovered. Anyhow, I do it like so:
+Of course there is not much those differ in, except maybe the first shown here from RhinoMocks. Same as with setting up methods I wanted to do the same as NSubstitute does here but ran into the same problems as before. I've actually never checked if NSubstitute has similar issues that I discovered. Anyhow, I do it like so:
 
 ```csharp
 myMock.Received(x => x.SomeMethod()).AtLeastOne();
@@ -57,14 +56,12 @@ myMock.Received(x => x.SomeMethod()).AtLeastOne();
 
 The assertion is done in that last part. So leaving that out actually does nothing at all apart from blowing some CPU cycles into the air.
 
-### &nbsp;
-
 ### Argument matching
 
-My personal favourite! It took a while until I found a good way to do this, although in the end I was very inspired by one of the above frameworks, can’t remember which, though. First of all, API wise none of the mocking frameworks I mentioned differ much. Maybe another name but roughly the same functionality.  
-So, what do I mean by ‘argument matching’?
+My personal favourite! It took a while until I found a good way to do this, although in the end I was very inspired by one of the above frameworks, can't remember which, though. First of all, API wise none of the mocking frameworks I mentioned differ much. Maybe another name but roughly the same functionality.  
+So, what do I mean by `argument matching`?
 
-For instance, I might want to check if a method of my mock was called but I don’t care about with what parameters, or I don’t care about one of the parameters. That’s where argument matching comes in:
+For instance, I might want to check if a method of my mock was called but I don't care about with what parameters, or I don't care about one of the parameters. That's where argument matching comes in:
 
 ```csharp
 myMock.Setup(x => x.SomeMethod(Arg.Any()));
@@ -74,4 +71,4 @@ myMock.Received(x => x.SomeMethod(Arg.IsIn(1,2,3,4))).One();
 
 Those two are just examples, there are more of them.
 
-I really wanted to start explaining how this is done, especially since how can an integer tell it should be ‘any’? Long story short – I might explain it in more detail in a separate post – there is some re-routing logic on the mock statically.
+I really wanted to start explaining how this is done, especially since how can an integer tell it should be `any`? Long story short – I might explain it in more detail in a separate post – there is some re-routing logic on the mock statically.
