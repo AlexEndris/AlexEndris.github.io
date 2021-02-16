@@ -3,7 +3,7 @@ id: 9
 title: How code can talk – Signatures and interfaces
 date: 2015-02-02T21:29:00+01:00
 author: Qudeid
-layout: default
+layout: post
 guid: /post/How-code-can-talk-Signatures-and-interfaces
 permalink: /2015/02/02/how-code-can-talk-signatures-and-interfaces/
 categories:

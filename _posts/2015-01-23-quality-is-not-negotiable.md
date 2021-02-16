@@ -3,7 +3,7 @@ id: 10
 title: Quality is not negotiable…!
 date: 2015-01-23T21:03:40+01:00
 author: Qudeid
-layout: default
+layout: post
 guid: /post/Quality-is-not-negotiable…!
 permalink: /2015/01/23/quality-is-not-negotiable/
 categories:

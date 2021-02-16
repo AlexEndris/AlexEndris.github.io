@@ -3,7 +3,7 @@ id: 11
 title: Default to explicit interface implementation – yes or no?
 date: 2015-01-21T19:44:00+01:00
 author: Qudeid
-layout: default
+layout: post
 guid: /post/Default-to-explicit-interface-implementation-yes-or-no
 permalink: /2015/01/21/default-to-explicit-interface-implementation-yes-or-no/
 categories:

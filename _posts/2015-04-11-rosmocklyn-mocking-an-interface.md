@@ -3,7 +3,7 @@ id: 7
 title: RosMockLyn – Mocking an interface
 date: 2015-04-11T11:10:00+02:00
 author: Qudeid
-layout: default
+layout: post
 guid: /post/RosMockLyn-Mocking-an-interface
 permalink: /2015/04/11/rosmocklyn-mocking-an-interface/
 categories:
@@ -71,7 +71,7 @@ myMock.Expect(x => x.DoSomething());
 myMock.VerifyAll();
 ```
 
-When I look at the assertion line for RhinoMocks my first question is, what is ‘all'??? Do I really need to read the entire test to understand what is being asserted? Or differently phrased, shouldn't the assertion already tell me what is being checked? In my book it should. That's why I prefer NSubstitute's API much more than RhinoMocks'.  
+When I look at the assertion line for RhinoMocks my first question is, what is `all`??? Do I really need to read the entire test to understand what is being asserted? Or differently phrased, shouldn't the assertion already tell me what is being checked? In my book it should. That's why I prefer NSubstitute's API much more than RhinoMocks'.  
 I guess to a degree this is personal preference, but considering the fact that we developers should strive to a state where we minimize the time we (need to) read code in quest for understanding what is written, it's a huge plus.
 
 ## <u>Conclusion</u>

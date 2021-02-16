@@ -3,7 +3,7 @@ id: 5
 title: 'RosMockLyn – The API evolves: Part II'
 date: 2015-04-26T20:37:10+02:00
 author: Qudeid
-layout: default
+layout: post
 guid: /post/RosMockLyn-The-API-evolves-Part-II
 permalink: /2015/04/26/rosmocklyn-the-api-evolves-part-ii/
 categories:

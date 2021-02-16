@@ -3,7 +3,7 @@ id: 8
 title: RosMockLyn – An introduction
 date: 2015-04-09T22:47:34+02:00
 author: Qudeid
-layout: default
+layout: post
 guid: /post/RosMockLyn-An-introduction
 permalink: /2015/04/09/rosmocklyn-an-introduction/
 categories:
